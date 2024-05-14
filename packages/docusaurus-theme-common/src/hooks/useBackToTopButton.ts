@@ -31,8 +31,8 @@ export function useBackToTopButton({
    */
   scrollToTop: () => void;
 } {
-  const [shown, setShown] = useState(false);
-  const isFocusedAnchor = useRef(false);
+  const [shown, setShown] = useState(true);
+  const isFocusedAnchor = useRef(true);
   const {startScroll, cancelScroll} = useSmoothScrollTo();
 
   useScrollPosition(({scrollY: scrollTop}, lastPosition) => {
